@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtTitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="MINHA FROTA APP"
+                android:textColor="#B0000000"
+                android:textSize="24sp" />
+
+            <ImageView
+                android:id="@+id/imgLogo"
+                android:layout_width="250dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/logo" />
+
+            <EditText
+                android:id="@+id/idMarca"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:hint="Marca"
+                android:inputType="textPersonName"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/idModelo"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:hint="Modelo"
+                android:inputType="textPersonName"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/idAno"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:hint="Ano do veiculo"
+                android:inputType="number"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/idPlaca"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:hint="Placa"
+                android:inputType="textPersonName"
+                android:textAlignment="center" />
+
+            <Button
+                android:id="@+id/btnAdicionar"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="8dp"
+                android:background="#B0000000"
+                android:text="Adicionar"
+                android:textColor="@android:color/background_light" />
+
+            <Button
+                android:id="@+id/btnListar"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="#B0000000"
+                android:text="Listar"
+                android:textColor="@android:color/background_light" />
+
+            <TextView
+                android:id="@+id/txtDescricao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Carros CRUD com SQLite. Versão final (Sem MVC)"
+                android:textAlignment="center"
+                android:textColor="@android:color/background_light"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
