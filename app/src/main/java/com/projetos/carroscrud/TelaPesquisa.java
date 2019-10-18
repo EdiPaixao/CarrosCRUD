@@ -134,46 +134,4 @@ public class TelaPesquisa extends Activity {
         }
     }
 
-
-    public int retornaId(String marca){
-        if (marca.equals("Fiat")) {
-            return R.drawable.fiat;
-        } else if (marca.equals("Ford")) {
-            return R.drawable.ford;
-        } else if (marca.equals("GM") || marca.equals("Chevrolet")) {
-            return R.drawable.chevrolet;
-        } else if (marca.equals("Volkswagen") || marca.equals("VW")) {
-            return R.drawable.volkswagen;
-        } else if (marca.equals("Toyota")) {
-            return R.drawable.toyota;
-        } else if (marca.equals("Mitsubishi")) {
-            return R.drawable.mitsubish;
-        } else if (marca.equals("Jeep")) {
-            return R.drawable.jeep;
-        } else if (marca.equals("Hyundai")) {
-            return R.drawable.hyundai;
-        } else if (marca.equals("Dodge")) {
-            return R.drawable.dodge;
-        } else if (marca.equals("Audi")) {
-            return R.drawable.audi;
-        } else if (marca.equals("BMW") || marca.equals("bmw")) {
-            return R.drawable.bmw;
-        } else if (marca.equals("Chery")) {
-            return R.drawable.chery;
-        } else if (marca.equals("Citroen")) {
-            return R.drawable.citroen;
-        } else if (marca.equals("Ferrari")) {
-            return R.drawable.ferrari;
-        } else if (marca.equals("Jac")) {
-            return R.drawable.jac;
-        } else if (marca.equals("Peugeot")) {
-            return R.drawable.peugeot;
-        } else if (marca.equals("Suzuki")) {
-            return R.drawable.suzuki;
-        } else {
-            return R.drawable.desconhecido;
-        }
-
-    }
-
 }

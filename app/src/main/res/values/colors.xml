@@ -3,4 +3,5 @@
     <color name="colorPrimary">#B25000</color>
     <color name="colorPrimaryDark">#FF0000</color>
     <color name="colorAccent">#CD3700</color>
+    <color name="Escuro">#000000</color>
 </resources>

@@ -1,58 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
-    tools:context=".TelaListar">
+    tools:context=".TelaListar"
+    android:fillViewport="true">
 
-    <ScrollView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        >
 
-        <LinearLayout
+        <ListView
+            android:id="@+id/lstLista"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="10dp"
+            android:background="#7AFFB90F"
+            app:layout_constraintBottom_toTopOf="@+id/btnHome"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="250dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtTituloListar" />
+
+        <TextView
+            android:id="@+id/txtTituloListar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:fontFamily="sans-serif-condensed-medium"
             android:gravity="center"
-            android:fillViewport="true">
+            android:text="LISTAGEM DE VEÍCULOS"
+            android:textColor="#B0000000"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/txtTituloListar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:fontFamily="sans-serif-condensed-medium"
-                android:text="LISTAGEM DE VEÍCULOS"
-                android:textColor="#B0000000"
-                android:textSize="30sp" />
+        <Button
+            android:id="@+id/btnHome"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="#B0000000"
+            android:text="Tela Inicial"
+            android:textColor="@android:color/background_light"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent" />
 
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="200dp"
-                android:layout_height="120dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/logo" />
 
-            <ListView
-                android:id="@+id/lstLista"
-                android:layout_width="wrap_content"
-                android:layout_height="300dp"
-                android:layout_marginTop="20dp"
-                android:background="#7AFFB90F">
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-            </ListView>
-
-            <Button
-                android:id="@+id/btnHome"
-                android:layout_width="120dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="20dp"
-                android:background="#B0000000"
-                android:text="Tela Inicial"
-                android:textColor="@android:color/background_light" />
-        </LinearLayout>
-    </ScrollView>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
