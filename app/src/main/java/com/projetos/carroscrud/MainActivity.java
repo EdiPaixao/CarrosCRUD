@@ -88,7 +88,7 @@ public class MainActivity extends Activity {
                         //APRESENTANDO MENSAGEM DE SUCESSO
                         // Limpa os campos
                         limpaCampos();
-                        showMessage("Successo", "Veículo incluido com sucesso!");
+                        showMessage("Sucesso", "Veículo incluido com sucesso!");
                     }
                 }catch (Exception e){
                     e.printStackTrace();
@@ -150,4 +150,5 @@ public class MainActivity extends Activity {
                     c.getString(c.getColumnIndex("ano"))));
         }
     }
+
 }

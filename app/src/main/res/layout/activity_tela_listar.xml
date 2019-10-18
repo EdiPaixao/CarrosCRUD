@@ -15,7 +15,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:fillViewport="true">
 
             <TextView
                 android:id="@+id/txtTituloListar"
@@ -37,7 +38,7 @@
             <ListView
                 android:id="@+id/lstLista"
                 android:layout_width="wrap_content"
-                android:layout_height="400dp"
+                android:layout_height="300dp"
                 android:layout_marginTop="20dp"
                 android:background="#7AFFB90F">
 

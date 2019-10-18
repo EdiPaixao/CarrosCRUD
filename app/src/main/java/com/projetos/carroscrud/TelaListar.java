@@ -42,7 +42,8 @@ public class TelaListar extends AppCompatActivity {
 
         listaCarros = (ArrayList<Carros>) b.getSerializable("listaCarros");
 
-        adaptador = new ArrayAdapter<>(getApplication(), android.R.layout.simple_list_item_1, listaCarros);
+        //adaptador = new ArrayAdapter<>(getApplication(), android.R.layout.simple_list_item_1, listaCarros);
+        adaptador = new CarroAdapter(getApplicationContext(), listaCarros);
 
         lista.setAdapter(adaptador);
 
