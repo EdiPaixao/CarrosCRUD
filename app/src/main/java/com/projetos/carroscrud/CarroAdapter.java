@@ -33,7 +33,7 @@ public class CarroAdapter extends ArrayAdapter<Carros> {
          //CHAMANDO A LOGO
          ImageView imgLogo = rowView.findViewById(R.id.imgListaLogo);
 
-         //AQUI COMEÇA A CAGADA DO CÓDIGO
+         //SETANDO IMAGENS NA LISTA
          String marca = elementos.get(position).getMarca();
          if (marca.equals("Fiat")) {
              imgLogo.setImageResource(R.drawable.fiat);
