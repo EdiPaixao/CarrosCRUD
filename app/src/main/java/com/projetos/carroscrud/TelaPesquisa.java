@@ -117,7 +117,7 @@ public class TelaPesquisa extends Activity {
             imgMarca.setImageResource(R.drawable.audi);
         } else if (marca.equals("BMW") || marca.equals("bmw")) {
             imgMarca.setImageResource(R.drawable.bmw);
-        } else if (marca.equals("Chery")) {
+        } else if (marca.equals("Cherry")) {
             imgMarca.setImageResource(R.drawable.chery);
         } else if (marca.equals("Citroen")) {
             imgMarca.setImageResource(R.drawable.citroen);
