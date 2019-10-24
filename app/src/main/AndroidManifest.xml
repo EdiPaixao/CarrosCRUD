@@ -9,10 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".TelaListar"></activity>
-        <activity android:name=".Tela_Alterar" />
-        <activity android:name=".TelaPesquisa" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".TelaListar"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".Tela_Alterar"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".TelaPesquisa"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
