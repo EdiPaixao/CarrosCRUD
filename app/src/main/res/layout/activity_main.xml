@@ -38,18 +38,22 @@
                 android:layout_marginTop="16dp"
                 android:background="@drawable/logo" />
 
-            <EditText
-                android:id="@+id/idMarca"
+            <TextView
+                android:id="@+id/txtSelMarca"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="Selecione uma marca:"
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/spnMarcas"
                 android:layout_width="250dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/teste"
-                android:ems="10"
-                android:hint="Marca"
-                android:inputType="textPersonName"
-                android:textAlignment="center"
-                android:textColorLink="#FF5722"
-                android:textSize="24sp" />
+                android:background="@android:color/white"
+                android:textAlignment="center" />
 
             <EditText
                 android:id="@+id/idModelo"

@@ -69,6 +69,8 @@ public class CarroAdapter extends ArrayAdapter<Carros> {
              imgLogo.setImageResource(R.drawable.peugeot);
          } else if (marca.equals("Suzuki")) {
              imgLogo.setImageResource(R.drawable.suzuki);
+         }else if (marca.equals("Renault")) {
+             imgLogo.setImageResource(R.drawable.renault);
          } else {
              imgLogo.setImageResource(R.drawable.desconhecido);
          }

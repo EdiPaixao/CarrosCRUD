@@ -127,6 +127,8 @@ public class TelaPesquisa extends Activity {
             imgMarca.setImageResource(R.drawable.jac);
         } else if (marca.equals("Peugeot")) {
             imgMarca.setImageResource(R.drawable.peugeot);
+        }else if (marca.equals("Renault")) {
+            imgMarca.setImageResource(R.drawable.renault);
         } else if (marca.equals("Suzuki")) {
             imgMarca.setImageResource(R.drawable.suzuki);
         } else {

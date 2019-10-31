@@ -44,16 +44,12 @@
                 android:text="Marca:"
                 android:textSize="20sp" />
 
-            <EditText
-                android:id="@+id/idMarca"
+            <Spinner
+                android:id="@+id/spnAtualizaMarca"
                 android:layout_width="250dp"
                 android:layout_height="50dp"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/teste"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:textAlignment="center"
-                android:textSize="22sp" />
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white" />
 
             <TextView
                 android:id="@+id/textView6"

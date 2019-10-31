@@ -12,8 +12,10 @@ import android.os.Bundle;
 import android.text.InputFilter;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 import com.github.rtoshiro.util.format.SimpleMaskFormatter;
 import com.github.rtoshiro.util.format.text.MaskTextWatcher;
@@ -25,13 +27,14 @@ import java.util.List;
 public class MainActivity extends Activity {
 
     private Button adicionar;
-    private EditText marca;
     private EditText modelo;
     private EditText ano;
-    private Button pesquisar;
+    private Spinner marcas;
     private EditText placa;
     private Button listar;
+
     private ArrayList<Carros> listaCarros = new ArrayList<>();
+    private ArrayAdapter<String> adaptador;
     SQLiteDatabase bancodedados;
 
     @Override
@@ -42,15 +45,20 @@ public class MainActivity extends Activity {
         //COLOCANDO AS IDS DOS COMPONENTES DA ACTIVITY
         adicionar = findViewById(R.id.btnAdicionar);
         ano = findViewById(R.id.idAno);
-        marca = findViewById(R.id.idMarca);
         modelo = findViewById(R.id.idModelo);
         placa = findViewById(R.id.idPlaca);
         listar = findViewById(R.id.btnListar);
+        marcas = findViewById(R.id.spnMarcas);
 
         //CRIANDO O BANCO DE DADOS
         bancodedados = openOrCreateDatabase("carros", MODE_PRIVATE, null);
         //CRIANDO A TABELA
         bancodedados.execSQL("CREATE TABLE IF NOT EXISTS carros (id INTEGER PRIMARY KEY AUTOINCREMENT, ano VARCHAR, modelo VARCHAR, marca VARCHAR, placa VARCHAR) ");
+
+        //SETAR DADOS NA SPINNER
+        adaptador = new ArrayAdapter<>(getApplicationContext(), R.layout.spinner_text, listagemMarcas());
+        adaptador.setDropDownViewResource(R.layout.simple_spinner_dropdown);
+        marcas.setAdapter(adaptador);
 
 
         placa.setFilters( new InputFilter[] {new InputFilter.AllCaps ()});
@@ -66,7 +74,7 @@ public class MainActivity extends Activity {
 
                     String Ano = ano.getText().toString();
                     String Modelo = modelo.getText().toString();
-                    String Marca = marca.getText().toString();
+                    String Marca = marcas.getSelectedItem().toString();
                     String Placa = placa.getText().toString();
 
 
@@ -77,7 +85,7 @@ public class MainActivity extends Activity {
 
                         // COLETANDO DADOS
                         ContentValues values = new ContentValues();
-                        values.put("marca", marca.getText().toString());
+                        values.put("marca", marcas.getSelectedItem().toString());
                         values.put("modelo", modelo.getText().toString());
                         values.put("ano", ano.getText().toString());
                         values.put("placa", placa.getText().toString());
@@ -120,7 +128,6 @@ public class MainActivity extends Activity {
 
     //LIMPA CAMPOS
     public void limpaCampos(){
-        marca.setText("");
         modelo.setText("");
         ano.setText("");
         placa.setText("");
@@ -149,6 +156,31 @@ public class MainActivity extends Activity {
                     c.getString(c.getColumnIndex("placa")),
                     c.getString(c.getColumnIndex("ano"))));
         }
+    }
+
+    public ArrayList<String> listagemMarcas(){
+        ArrayList<String> lista = new ArrayList<>();
+
+        lista.add("Audi");
+        lista.add("BMW");
+        lista.add("Cherry");
+        lista.add("Chevrolet");
+        lista.add("Citroen");
+        lista.add("Dodge");
+        lista.add("Ferrari");
+        lista.add("Fiat");
+        lista.add("Ford");
+        lista.add("Hyundai");
+        lista.add("Jac");
+        lista.add("Jeep");
+        lista.add("Peugeot");
+        lista.add("Renault");
+        lista.add("Mitsubish");
+        lista.add("Suzuki");
+        lista.add("Toyota");
+        lista.add("Volkswagem");
+
+        return lista;
     }
 
 }
