@@ -62,7 +62,7 @@ public class MainActivity extends Activity {
 
 
         placa.setFilters( new InputFilter[] {new InputFilter.AllCaps ()});
-        SimpleMaskFormatter simpleMaskPlaca= new SimpleMaskFormatter("AAA-NNNN");
+        SimpleMaskFormatter simpleMaskPlaca= new SimpleMaskFormatter("UUU-NNNN");
         MaskTextWatcher maskMatricula = new MaskTextWatcher(placa, simpleMaskPlaca);
         placa.addTextChangedListener(maskMatricula);
 
